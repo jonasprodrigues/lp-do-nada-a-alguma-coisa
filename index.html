@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angelo Maggion</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            Playfair: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+  /* Estilo do botão */
+  .btn-dourado {
+    padding: 12px 24px;        /* Espaçamento interno */
+    border: 2px solid #BA914D; /* Borda dourada */
+    background-color: transparent; /* Inicialmente transparente */
+    color: white;            /* Texto dourado */
+    
+    font-size: 24px;
+    border-radius: 8px;        /* Arredondamento */
+    text-transform: uppercase; 
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transição suave */
+  }
+
+  /* Hover: muda fundo e texto */
+  .btn-dourado:hover {
+    background-color: #BA914D; /* Fundo dourado */
+    color: white;               /* Texto preto */
+  }
+
+  /* Ativo: efeito quando clica */
+  .btn-dourado:active {
+    transform: scale(0.97); /* Leve efeito de clique */
+  }
+
+
+
+
+
+
+
+
+.emblema-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+
+  /* fundo */
+  background-image: url("assets/livro3d/cavalete.png");
+  background-size: cover;   /* cobre toda a área */
+  background-position: center;
+  border-radius: 50%;       /* opcional: deixa circular */
+}
+
+.emblema {
+  width: 150px;
+  height: 150px;
+  animation: girar 5s linear infinite;
+}
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body class="">
+
+
+
+
+
+
+
+
+    <!-- Hero Section -->
+  <section class="text-gray-300 bg-cover bg-center" style="background-image: url('assets/livro3d/fundo.jpg');">
+    <div class="relative flex h-[800px] bg-cover bg-center text-white"
+     style="background-image: url('assets/livro3d/Livro-Do-nada.jpg');">
+  
+  <!-- Título principal (lado esquerdo) -->
+  <div class="w-[45%] flex flex-col pt-[150px]">
+    <h2 class="font-[Playfair] leading-[1.1] pl-16 text-[80px] md:text-[100px]">
+      <span class="block text-[120px] md:text-[160px] font-bold">Do nada</span>
+      a alguma coisa
+    </h2>
+<div class="text-right pt-16 pr-16">
+  <a 
+    href="#comprar" 
+    class="text-3xl inline-block bg-amber-600 hover:bg-amber-300 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300 shadow-xl drop-shadow-lg"
+  >
+    <span class="drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
+      Clique e comece sua jornada
+    </span>
+  </a>
+</div>
+
+  </div>
+
+  <!-- Frase lateral (lado direito, colada no meio) -->
+  <div class="w-[55%] flex items-center justify-start pb-[300px] pl-16">
+    <h4 class="text-3xl md:text-5xl italic leading-snug pl-8 border-l-4 border-white">
+      “A vida contada <br> sem floreios.”
+    </h4>
+  </div>
+</div>
+
+
+
+
+</section>
+
+
+<section>
+  <div class="items-center bg-[#484B36]">
+    <h4 class="text-4xl px-48 text-center text-gray-100 py-8">
+      Uma reflexão sobre o que nasce do vazio, cresce no silêncio e se transforma em tudo aquilo que realmente importa.
+    </h4>
+  </div>
+</section>
+  
+<section id="chamada" class="">
+  <div class="flex flex-col md:flex-row items-center justify-between bg-gray-100 text-gray-700 px-8 md:px-16 py-16 md:py-24">
+  
+  <!-- Texto à esquerda -->
+  <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6"><span class="text-green-500">Descobrir o sentido da vida</span> pode ser mais simples do que você imagina.</h2>
+    
+    <p class="mb-4 text-lg md:text-xl leading-relaxed">
+      Este livro é acessível a todos, independentemente de experiência prévia com obras literárias ou reflexões filosóficas.
+    </p>
+    
+    <p class="mb-4 text-lg md:text-xl leading-relaxed">
+      Baseado em observações da vida cotidiana, ele oferece contos e reflexões autênticas e bem estruturadas. Foi elaborado para proporcionar uma jornada profunda e leve, trazendo clareza e beleza às experiências comuns do dia a dia.
+    </p>
+    
+    <p class="mb-6 text-lg md:text-xl leading-relaxed">
+      Enriqueça sua percepção da vida com esta coletânea única, que transforma o ordinário em histórias memoráveis.
+    </p>
+    
+<div class="text-right">
+  <a 
+    href="#comprar" 
+    class="text-3xl inline-block bg-amber-700 hover:bg-amber-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300 shadow-xl"
+  >
+    <span class="drop-shadow-[2px_2px_6px_rgba(0,0,0,0.6)]">
+      QUERO ADQUIRIR AGORA MESMO
+    </span>
+  </a>
+</div>
+  </div>
+  
+  <!-- Imagem à direita -->
+  <div class="md:w-1/2 flex justify-center">
+    <img src="assets/livro3d/leitor2.png" alt="Do Nada a Alguma Coisa" class="w-3/4 md:w-full ">
+  </div>
+</div>
+
+</section>
+
+
+<section id="avaliacoes" class="">
+  <h2 class="text-5xl py-16 text-center font-bold">
+    Avaliações
+  </h2>
+  
+  <div class="flex flex-col md:flex-col items-center justify-between text-gray-700 px-64 md:px-16 ">
+
+      <!-- Avaliacao 1 -->
+        <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 px-64 md:px-16">
+        
+  
+        <div class="md:w-2/3 mb-12 md:mb-0 md:pr-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-2 text-yellow-600">
+              Fabiane Aguiar
+          </h2>
+          
+          <p class="mb-2 text-lg md:text-xl leading-relaxed font-bold">
+            Um jeito belo e simples de falar sobre as durezas da vida
+          </p>
+          
+          <p class="mb-4 text-lg leading-relaxed">
+            Um livro muito bem escrito, que traz um toque de simplicidade em meio a tantas histórias complexas. Uma leitura leve e prazerosa sobre realidades tão difíceis e comuns a todos nós. Histórias que nos aproximam da vida comum, da vida real, dos desafios de ser humano e de conviver entre humanos , principalmente os de nosso contexto familiar. Um livro que retrata com simplicidade e beleza a vida como ela é!
+          </p>
+        </div>
+        <!-- Imagem à direita -->
+        <div class="md:w-1/3 flex justify-center">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+        </div>
+      </div>
+        
+        <hr class="my-10 border-t-2 border-gray-500/80 shadow w-full">
+
+        <!-- Avaliacao 2 -->
+        <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 px-64 md:px-16 ">
+          
+          <div class="md:w-2/3 mb-12 md:mb-0 md:pr-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-2 text-yellow-600">
+              Maria Angélica
+          </h2>
+          
+          <p class="mb-2 text-lg md:text-xl leading-relaxed font-bold">
+            O título é exatamente isso!
+          </p>
+          
+          <p class="mb-4 text-lg leading-relaxed">
+            Adorei ler esses contos. São contos que nos levam a pensar no nosso cotidiano; falam de coisas normais, mas que envolvem todos de uma certa forma. É um nada por ser comum, mas é alguma coisa por te fazer pensar, refleitir. Os personagens são fortes e pessoas comuns como nós. Bem realista. Recomendo! A autora está de parabéns!
+          </p>
+        </div>
+        <!-- Imagem à direita -->
+        <div class="md:w-1/3 flex justify-center">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+        </div>
+      </div>
+
+        <hr class="my-10 border-t-2 border-gray-500/80 shadow w-full">
+
+      <!-- Avaliacao 3 -->
+      <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 px-64 md:px-16 ">
+
+        <div class="md:w-2/3 mb-12 md:mb-0 md:pr-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-2 text-yellow-600">
+              Rebeca Aparecida
+          </h2>
+          
+          <p class="mb-2 text-lg md:text-xl leading-relaxed font-bold">
+            Contos e reflexões
+          </p>
+          
+          <p class="mb-4 text-lg leading-relaxed">
+            Que leitura envolvente! Com uma escrita sensível e descomplicada, a autora nos presenteia com reflexões profundas. Suas descrições delicadas me permitiram visualizar com clareza os personagens e cenários, e me tocaram de forma genuína até o desfecho emocionante da história.
+          </p>
+        </div>
+        <!-- Imagem à direita -->
+        <div class="md:w-1/3 flex justify-center">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+        </div>
+      </div>
+
+        <hr class="my-10 border-t-2 border-gray-500/80 shadow w-full">
+
+          <!-- Avaliacao 4 -->
+      <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 px-64 md:px-16 ">
+        <div class="md:w-2/3 mb-12 md:mb-0 md:pr-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-2 text-yellow-600">
+              Ivânia Rocha
+          </h2>
+          
+          <p class="mb-2 text-lg md:text-xl leading-relaxed font-bold">
+            Soco no estômago
+          </p>
+          
+          <p class="mb-4 text-lg leading-relaxed">
+            A coletânea de contos de Ana Paula Azevedo é curta, direta, certeira - como um soco no estômago. Linguagem simples, crua. Sem meias palavras nem enrolação, a autora descortina uma série de histórias do cotidiano, revelando dores de tudo quanto é tipo: separações, seja por morte ou divórcio; violências, angústias, muitas perdas e algum ganho. Disfarçada, nos contos finais, surge uma ponta de esperança. Uma leitura para impactar. Se quiser ser mexido, é uma excelente pedida.
+          </p>
+        </div>
+        <!-- Imagem à direita -->
+        <div class="md:w-1/3 flex justify-center">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+        </div>
+
+        
+      </div>
+
+  <hr class="my-10 border-t-2 border-gray-500/80 shadow w-full">
+
+          <!-- Avaliacao 5 -->
+      <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 px-64 md:px-16 pb-16">
+        
+        <div class="md:w-2/3 mb-12 md:mb-0 md:pr-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-2 text-yellow-600">
+              Caroline Factum
+          </h2>
+          
+          <p class="mb-2 text-lg md:text-xl leading-relaxed font-bold">
+            Candidato a melhor do ano.
+          </p>
+          
+          <p class="mb-4 text-lg leading-relaxed">
+            Forte candidato ao melhor do ano, lido por mim em 2025. São contos silenciosos e curtos que fazem barulho por muito tempo. A autora consegue te colocar no lugar de cada personagem e repensar os valores da humanidade. 
+
+      Em uma era de alta tecnologia, nos vemos enraizados em tabus que nos fazem agir como robôs pre-históricos. 
+
+      Algo repetitivo, mecânico que faz a IA parecer primitiva. O poder empírico prevalece, a maioria repete comportamentos autodestrutivos por não se achar digno de nada melhor.
+
+      Do Nada, Alguma Coisa, que seja um fio de esperança para uma humanidade que já deixou de ser humana...
+
+      Feliz em encontrar autores nacionais que ainda tenham sensibilidade para tocar vidas e fazer a diferença
+          </p>
+        </div>
+
+        <!-- Imagem à direita -->
+        <div class="md:w-1/3 flex justify-center">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+          <img src="assets/livro3d/estrela.webp" alt="Do Nada a Alguma Coisa" class="w-[100px]">
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<section id="sobre" class="flex flex-col md:flex-row items-center md:items-start mx-auto px-8 py-20 pt-16 bg-gray-100 w-full">
+  <!-- Foto à esquerda -->
+  <div class="w-full md:w-1/2 flex justify-center">
+    <img src="assets/livro3d/foto3.png" alt="Foto de Ana Paula Azevedo" class=" w-[520px] h-auto object-cover">
+  </div>
+
+  <!-- Texto à direita -->
+  <div class="w-full md:w-1/2 text-gray-800 pr-16 pt-16">
+    <h2 class="text-4xl font-bold mb-2">Ana Paula Azevedo</h2>
+    <h3 class="text-xl text-gray-600 mb-4">Autora de contos, crônicas e minicontos</h3>
+    <hr class="w-24 border-t-2 border-gray-400 mb-6">
+
+    <p class="leading-relaxed text-lg text-justify">
+      Nascida e criada em São Paulo capital. Escreve minicontos, contos e crônicas. 
+      Autora do e-book <em>O Quarto Vazio</em>, disponível na Amazon, e do livro de contos 
+      <em>Do nada a alguma coisa</em> pela Editora Litteralux. 
+    </p>
+
+    <p class="leading-relaxed text-lg mt-4 text-justify">
+      Abriu uma das edições em 2023 e outra em 2024 do <em>Livro Contos e Crônicas</em> 
+      da editora Palavra é Arte, projeto Literatura na Escola. 
+      Os exemplares físicos foram distribuídos para escolas de Torres – RS e Luziania – GO em 2023, 
+      e em 2024 para escolas de Braga – Portugal, Caicó – CE e Ananindeua – PA.
+    </p>
+
+    <p class="leading-relaxed text-lg mt-4 text-justify">
+      Sua crônica <em>O Sapato</em> foi classificada em 5º lugar no concurso Emídio de Souza. 
+      Também foi selecionada para a coletânea <em>Construtores de História 8 – Famílias Italianas no Brasil</em>, 
+      com o conto <em>O Filho da Empregada</em>. 
+    </p>
+
+    <p class="leading-relaxed text-lg mt-4 text-justify">
+      Participou da primeira <em>Revista Luminescências</em> com a crônica <em>Mecanismo de Defesa</em>, 
+      e sua crônica <em>O Rei Mago</em> foi destaque na coletânea da <em>Off Flip de Natal</em>.
+    </p>
+  </div>
+</section>
+
+
+
+<section id="sobre-livro" class="flex flex-col md:flex-row items-center md:items-start mx-auto px-8 py-20 pt-16 w-full gap-12 ">
+  
+  <!-- Texto à esquerda -->
+  <div class="w-full md:w-1/2 text-gray-800 pl-32">
+    <h2 class="text-4xl font-bold mb-2">Como as pessoas reagem diante das dificuldades da vida?</h2>
+    <h3 class="text-xl text-gray-600 mb-4">Vinte e cinco contos sobre pessoas comuns</h3>
+    <hr class="w-24 border-t-2 border-gray-400 mb-6">
+
+    <p class="leading-relaxed text-lg text-justify">
+      Neste livro Ana P. Azevedo tenta responder a essa pergunta através de vinte e cinco contos sobre pessoas comuns, que sofrem, sentem medo e tomam decisões às vezes acertadas e outras nem tanto. 
+    </p>
+
+    <p class="leading-relaxed text-lg mt-4 text-justify">
+      Os personagens enfrentam problemas como: desrespeito, alienação parental, inveja, relacionamentos ruins, preconceito e baixa autoestima. Alguns não percebem o que está acontecendo ou não têm oportunidade de agir, outros são dominados pelo medo, enquanto outros tomam uma atitude e, ou, fazem alguma diferença na vida dos demais.
+    </p>
+
+    <p class="leading-relaxed text-lg mt-4 text-justify">
+      Um retrato da nossa sociedade e dos problemas sociais e emocionais que ainda enfrentamos. Uma leitura sensível para se emocionar e refletir.
+    </p>
+  </div>
+
+  <!-- Imagem à direita -->
+  <div class="w-full md:w-1/2 flex flex-col items-center">
+    <img src="assets/livro3d/livro5.png" alt="Capa do livro Do nada a alguma coisa" class="w-[400px] h-auto object-cover mb-6 pl-16">
+
+    <!-- Botão Comprar -->
+    <a 
+      href="#comprar" 
+      class="text-4xl md:text-5xl inline-block bg-amber-700 hover:bg-amber-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300 shadow-xl"
+    >
+      <span class="drop-shadow-[2px_2px_6px_rgba(0,0,0,0.6)]">Quero adquirir agora</span>
+    </a>
+  </div>
+
+</section>
+
+
+  <!-- Rodapé -->
+ 
+<footer class="bg-[#484B36] text-white py-8 mt-12">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+    
+    <!-- Redes sociais -->
+    <div class="flex space-x-6 order-1 md:order-2">
+      <a href="https://api.whatsapp.com/send?phone=5524999921368&text=Ol%C3%A1,%20gostaria%20de%20falar%20com%20um%20especialista!" 
+         target="_blank" 
+         class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-lg transition">
+        <i class="bi bi-whatsapp text-xl"></i>
+        Whatsapp
+      </a>
+
+      <a href="https://www.instagram.com/ana_p.azevedo/" 
+         target="_blank" 
+         class="flex items-center gap-2 bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-lg transition">
+        <i class="bi bi-instagram text-xl"></i>
+        Siga-nos
+      </a>
+    </div>
+
+    <!-- Copyright + Feito com -->
+    <div class="text-center mt-6 md:mt-0 order-2 md:order-1">
+      <p>Copyright &copy; 2025 - Do nada a alguma coisa | Todos os direitos reservados.</p>
+      <p class="flex items-center justify-center gap-2 mt-2 text-sm ">
+        Feito com <span class="text-pink-500">💜</span> pela
+        <img src="assets/livro3d/2205wv-logo.png" 
+             alt="Logo" class="h-5 inline-block">
+      </p>
+
+
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
+>
