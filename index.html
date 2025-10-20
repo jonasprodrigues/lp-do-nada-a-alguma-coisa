@@ -28,67 +28,46 @@
   </script>
 
   <style>
-  /* Estilo do botão */
-  .btn-dourado {
-    padding: 12px 24px;        /* Espaçamento interno */
-    border: 2px solid #BA914D; /* Borda dourada */
-    background-color: transparent; /* Inicialmente transparente */
-    color: white;            /* Texto dourado */
-    
-    font-size: 24px;
-    border-radius: 8px;        /* Arredondamento */
-    text-transform: uppercase; 
-    cursor: pointer;
-    transition: all 0.3s ease; /* Transição suave */
-  }
 
-  /* Hover: muda fundo e texto */
-  .btn-dourado:hover {
-    background-color: #BA914D; /* Fundo dourado */
-    color: white;               /* Texto preto */
-  }
-
-  /* Ativo: efeito quando clica */
-  .btn-dourado:active {
-    transform: scale(0.97); /* Leve efeito de clique */
-  }
-
-
-
-
-
-
-
-
-.emblema-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-  width: 300px;
-
-  /* fundo */
-  background-image: url("assets/livro3d/cavalete.png");
-  background-size: cover;   /* cobre toda a área */
-  background-position: center;
-  border-radius: 50%;       /* opcional: deixa circular */
+/* Entrada da esquerda ao carregar */
+@keyframes inLeft {
+  0% { opacity: 0; transform: translateX(-200px); }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
-.emblema {
-  width: 150px;
-  height: 150px;
-  animation: girar 5s linear infinite;
+/* Entrada da direita ao carregar */
+@keyframes inRight {
+  0% { opacity: 0; transform: translateX(200px); }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes girar {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+/* Entrada ao rolar - subindo */
+@keyframes slideInUp {
+  0% { opacity: 0; transform: translateY(200px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
+/* Entrada ao rolar - esquerda */
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-400px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
 
+/* Entrada ao rolar - direita */
+@keyframes slideInRight {
+  0% { opacity: 0; transform: translateX(400px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
 
+/* Classes utilitárias */
+.in-left { animation: inLeft 2s ease forwards; }
+.in-right { animation: inRight 4s ease forwards; }
+.animate-up { animation: slideInUp 3s ease forwards; }
+.animate-left { animation: slideInLeft 3s ease forwards; }
+.animate-right { animation: slideInRight 3s ease forwards; }
 
-
+/* Invisível antes de entrar ao rolar */
+.invisible { opacity: 0; }
 
 
 
@@ -98,6 +77,7 @@
 
 
 </style>
+
 </head>
 <body class="">
 
@@ -109,7 +89,7 @@
      style="background-image: url('assets/livro3d/Livro-Do-nada.jpg');">
     
       <!-- Título principal (lado esquerdo) -->
-      <div class="md:w-[45%] flex flex-col pt-[30px] md:pt-[150px]">
+      <div class="md:w-[45%] flex flex-col pt-[30px] md:pt-[150px] in-left">
         <h2 class="font-[Playfair] leading-[1.1] pl-8 md:pl-16 text-[80px] md:text-[100px]">
           <span class="block text-[80px] md:text-[160px] font-bold">Do nada</span>
           a alguma coisa
@@ -118,7 +98,7 @@
       </div>
 
       <!-- Frase lateral (lado direito, colada no meio) -->
-      <div class="w-[75%] md:w-[55%] flex items-center justify-start pb-[100px] md:pb-[300px] pl-8 md:pl-16 md:pt-64">
+      <div class="w-[75%] md:w-[55%] flex items-center justify-start pb-[100px] md:pb-[300px] pl-8 md:pl-16 md:pt-64 in-right">
         <h4 class="text-3xl md:text-5xl italic leading-snug pl-8 border-l-4 border-white">
           “A vida contada <br> sem floreios.”
         </h4>
@@ -142,7 +122,7 @@
 
 
 <section id="tarja">
-  <div class="items-center bg-[#484B36]">
+  <div class="animate-up items-center bg-[#484B36] invisible up">
     <h4 class="text-3xl md:text-4xl px-4 md:px-8 md:px-48 text-center text-gray-100 py-8">
       Uma reflexão sobre o que nasce do vazio, cresce no silêncio e se transforma em tudo aquilo que realmente importa.
     </h4>
@@ -153,7 +133,7 @@
   <div class="flex flex-col md:flex-row items-center justify-between bg-gray-100 text-gray-700 px-8 md:px-16 py-16 md:py-24 text-justify md:text-left">
   
   <!-- Texto à esquerda -->
-  <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+  <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12  invisible left">
     <h2 class="text-2xl md:text-5xl font-bold mb-6"><span class="text-green-500">Descobrir o sentido da vida</span> pode ser mais simples do que você imagina.</h2>
     
     <p class="mb-4 text-lg md:text-xl leading-relaxed">
@@ -181,7 +161,7 @@
   </div>
   
   <!-- Imagem à direita -->
-  <div class="md:w-1/2 flex justify-center">
+  <div class="md:w-1/2 flex justify-center invisible right">
     <img src="assets/livro3d/leitor2.png" alt="Do Nada a Alguma Coisa" class="w-full ">
   </div>
 </div>
@@ -190,14 +170,14 @@
 
 
 <section id="avaliacoes" class="">
-  <h2 class="text-5xl py-16 text-center font-bold">
+  <h2 class="text-5xl py-16 text-center font-bold invisible up">
     Avaliações
   </h2>
   
   <div class="flex flex-col md:flex-col items-center justify-between text-gray-700 px-8">
 
       <!-- Avaliacao 1 -->
-        <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 md:px-16 text-justify">
+        <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 md:px-16 text-justify invisible up">
         
   
         <div class="md:w-2/3 mb-12 md:mb-0 md:pr-12">
@@ -223,10 +203,10 @@
         </div>
       </div>
         
-        <hr class="my-10 border-t-2 border-gray-500/80 shadow w-full">
+        <hr class="my-10 border-t-2 border-gray-500/80 shadow w-full invisible up">
 
         <!-- Avaliacao 2 -->
-        <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 md:px-16 text-justify">
+        <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 md:px-16 text-justify invisible up">
           
           <div class="md:w-2/3 mb-12 md:mb-0 md:pr-12">
           <h2 class="text-4xl md:text-5xl font-bold mb-2 text-yellow-600">
@@ -251,10 +231,10 @@
         </div>
       </div>
 
-        <hr class="my-10 border-t-2 border-gray-500/80 shadow w-full">
+        <hr class="my-10 border-t-2 border-gray-500/80 shadow w-full invisible up">
 
       <!-- Avaliacao 3 -->
-      <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 md:px-16 text-justify">
+      <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 md:px-16 text-justify invisible up">
 
         <div class="md:w-2/3 mb-12 md:mb-0 md:pr-12">
           <h2 class="text-4xl md:text-5xl font-bold mb-2 text-yellow-600">
@@ -279,10 +259,10 @@
         </div>
       </div>
 
-        <hr class="my-10 border-t-2 border-gray-500/80 shadow w-full">
+        <hr class="my-10 border-t-2 border-gray-500/80 shadow w-full invisible up">
 
           <!-- Avaliacao 4 -->
-      <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 md:px-16 text-justify">
+      <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 md:px-16 text-justify invisible up">
         <div class="md:w-2/3 mb-12 md:mb-0 md:pr-12">
           <h2 class="text-4xl md:text-5xl font-bold mb-2 text-yellow-600">
               Ivânia Rocha
@@ -308,10 +288,10 @@
         
       </div>
 
-  <hr class="my-10 border-t-2 border-gray-500/80 shadow w-full">
+  <hr class="my-10 border-t-2 border-gray-500/80 shadow w-full invisible up">
 
           <!-- Avaliacao 5 -->
-      <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 md:px-16 text-justify">
+      <div class="flex flex-col md:flex-row items-center justify-between text-gray-700 md:px-16 text-justify invisible up">
         
         <div class="md:w-2/3 mb-12 md:mb-0 md:pr-12">
           <h2 class="text-4xl md:text-5xl font-bold mb-2 text-yellow-600">
@@ -350,12 +330,12 @@
 
 <section id="sobre" class="flex flex-col md:flex-row items-center md:items-start mx-auto px-8 py-20 pt-16 bg-gray-100 w-full">
   <!-- Foto à esquerda -->
-  <div class="w-full md:w-1/2 flex justify-center">
+  <div class="w-full md:w-1/2 flex justify-center invisible left">
     <img src="assets/livro3d/foto3.png" alt="Foto de Ana Paula Azevedo" class=" w-[520px] h-auto object-cover">
   </div>
 
   <!-- Texto à direita -->
-  <div class="w-full md:w-1/2 text-gray-800 md:pr-16 pt-16">
+  <div class="w-full md:w-1/2 text-gray-800 md:pr-16 pt-16 invisible right">
     <h2 class="text-4xl font-bold mb-2">Ana Paula Azevedo</h2>
     <h3 class="text-xl text-gray-600 mb-4">Autora de contos, crônicas e minicontos</h3>
     <hr class="w-24 border-t-2 border-gray-400 mb-6">
@@ -391,7 +371,7 @@
 <section id="sobre-livro" class="flex flex-col md:flex-row items-center md:items-start mx-auto px-8 py-20 pt-16 w-full gap-12 ">
   
   <!-- Texto à esquerda -->
-  <div class="w-full md:w-1/2 text-gray-800 md:pl-32 order-2 md:order-1">
+  <div class="w-full md:w-1/2 text-gray-800 md:pl-32 order-2 md:order-1 invisible up">
     <h2 class="text-4xl font-bold mb-2">Como as pessoas reagem diante das dificuldades da vida?</h2>
     <h3 class="text-xl text-gray-600 mb-4">Vinte e cinco contos sobre pessoas comuns</h3>
     <hr class="w-24 border-t-2 border-gray-400 mb-6">
@@ -410,7 +390,7 @@
   </div>
 
   <!-- Imagem à direita -->
-  <div class="w-full md:w-1/2 flex flex-col items-center text-center order-1 md:order-2">
+  <div class="w-full md:w-1/2 flex flex-col items-center text-center order-1 md:order-2 invisible up">
     <img src="assets/livro3d/livro5.png" alt="Capa do livro Do nada a alguma coisa" class="w-[400px] h-auto object-cover mb-6 md:pl-16">
 
     <!-- Botão Comprar -->
@@ -461,6 +441,29 @@
   </div>
 </footer>
 
+
+<script>
+const elementos = document.querySelectorAll('.invisible');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      const el = entry.target;
+
+      // adiciona a animação correta conforme a classe presente
+      if(el.classList.contains('up')) el.classList.add('animate-up');
+      if(el.classList.contains('left')) el.classList.add('animate-left');
+      if(el.classList.contains('right')) el.classList.add('animate-right');
+
+      el.classList.remove('invisible');
+      observer.unobserve(el); // anima apenas uma vez
+    }
+  });
+}, { threshold: 0.1 });
+
+// observa todos os elementos invisíveis
+elementos.forEach(el => observer.observe(el));
+</script>
 
 
 </body>
